@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vietnam &amp; Laos Dossier · Dec 4–20, 2026 · Hanoi → Vientiane → Doha</title>
+<style>
+:root{
+  --ink:#1d2b2a; --teal:#0f5c5c; --teal2:#137a6e; --gold:#c19a3d; --sand:#f7f3ea;
+  --line:#d9d2c3; --muted:#5d6b6a; --red:#a83232; --blue:#1c4e80; --green:#2e6b3f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:15.5px/1.55 Georgia,'Times New Roman',serif;color:var(--ink);background:#efe9dc}
+.page{max-width:860px;margin:0 auto;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.12)}
+header.cover{background:linear-gradient(150deg,#0c3f42,#0f5c5c 45%,#14796c);color:#fff;padding:54px 48px 40px;position:relative;overflow:hidden}
+header.cover::after{content:"VN ★ LA";position:absolute;right:-12px;bottom:-26px;font-size:120px;opacity:.07;letter-spacing:8px;font-weight:bold}
+.kicker{font-family:'Segoe UI',system-ui,sans-serif;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:#ffd98a}
+header.cover h1{font-size:42px;line-height:1.12;margin:10px 0 6px;font-weight:normal}
+header.cover h2{font-size:19px;font-weight:normal;opacity:.92;margin-bottom:18px}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:7px 13px;font-family:'Segoe UI',system-ui,sans-serif;font-size:12.5px}
+nav.toc{background:var(--sand);border-bottom:1px solid var(--line);padding:18px 48px;font-family:'Segoe UI',system-ui,sans-serif;font-size:13px}
+nav.toc a{color:var(--teal);text-decoration:none;margin-right:14px;line-height:2;display:inline-block}
+nav.toc a:hover{text-decoration:underline}
+section{padding:34px 48px;border-bottom:1px solid var(--line)}
+h3.sec{font-size:25px;color:var(--teal);border-bottom:2px solid var(--gold);padding-bottom:8px;margin-bottom:18px;font-weight:normal}
+h3.sec small{display:block;font-family:'Segoe UI',system-ui,sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+p{margin:0 0 11px}
+ul,ol{margin:0 0 13px 22px}
+li{margin-bottom:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0 18px;font-family:'Segoe UI',system-ui,sans-serif;font-size:12.8px}
+th{background:var(--teal);color:#fff;text-align:left;padding:8px 10px;font-weight:600}
+td{border:1px solid var(--line);padding:7px 10px;vertical-align:top}
+tr:nth-child(even) td{background:#faf8f3}
+.route{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:var(--sand);border-left:4px solid var(--gold);padding:12px 16px;margin:14px 0}
+.day{border:1px solid var(--line);margin:20px 0;border-radius:2px;overflow:hidden}
+.day-h{background:linear-gradient(90deg,var(--teal),var(--teal2));color:#fff;padding:10px 16px;font-family:'Segoe UI',system-ui,sans-serif;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.day-h .dt{font-size:17px;font-weight:700}
+.day-h .pl{font-size:12.5px;opacity:.9}
+.day-b{padding:14px 18px}
+.slot{display:grid;grid-template-columns:86px 1fr;gap:10px;margin-bottom:9px;font-size:14.5px}
+.slot b{color:var(--teal);font-family:'Segoe UI',system-ui,sans-serif;font-size:12.5px;padding-top:2px}
+.tip{background:#fdf6e3;border:1px solid #ecd9a6;padding:8px 12px;font-size:13.5px;margin:10px 0;font-family:'Segoe UI',system-ui,sans-serif}
+.warn{background:#fdecec;border:1px solid #eec4c4;padding:8px 12px;font-size:13.5px;margin:10px 0;font-family:'Segoe UI',system-ui,sans-serif}
+.ok{background:#e9f5ec;border:1px solid #bcdcc4;padding:8px 12px;font-size:13.5px;margin:10px 0;font-family:'Segoe UI',system-ui,sans-serif}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{border:1px solid var(--line);padding:14px 16px;background:#fdfcf9}
+.card h4{color:var(--teal);margin-bottom:8px;font-size:16px;font-weight:normal;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.card ul{margin-left:18px;font-size:13.8px}
+.price{font-family:'Segoe UI',system-ui,sans-serif;font-weight:700;color:var(--green)}
+.small{font-size:12.5px;color:var(--muted);font-family:'Segoe UI',system-ui,sans-serif}
+.tag{display:inline-block;background:var(--sand);border:1px solid var(--line);font-family:'Segoe UI',system-ui,sans-serif;font-size:11px;padding:2px 8px;margin:2px 3px 2px 0;color:var(--teal)}
+.countdown td:first-child{font-weight:700;color:var(--teal);white-space:nowrap}
+.footer{padding:26px 48px;background:var(--sand);font-family:'Segoe UI',system-ui,sans-serif;font-size:12px;color:var(--muted);text-align:center}
+button.print{position:fixed;right:18px;bottom:18px;z-index:99;background:var(--teal);color:#fff;border:0;padding:12px 18px;font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+button.print:hover{background:var(--teal2)}
+@media print{
+  @page{size:A4;margin:12mm 10mm}
+  body{background:#fff;font-size:12.5px}
+  .page{max-width:none;box-shadow:none}
+  header.cover{padding:90px 40px 60px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  nav.toc,button.print{display:none}
+  section{padding:16px 6px;page-break-inside:auto}
+  h3.sec{page-break-after:avoid}
+  .day,.card{page-break-inside:avoid}
+  .day-h,th,.chip,.kicker{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .newpage{page-break-before:always}
+}
+@media(max-width:700px){
+  header.cover,section,nav.toc,.footer{padding-left:20px;padding-right:20px}
+  .grid2{grid-template-columns:1fr}
+  .slot{grid-template-columns:70px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="cover">
+  <div class="kicker">Personal Travel Dossier · Prepared 20 October 2026</div>
+  <h1>Vietnam &amp; Laos<br>Grand Itinerary</h1>
+  <h2>Hanoi · Ha Long Bay · Sapa → Luang Prabang · Vang Vieng · Vientiane → Doha</h2>
+  <p style="max-width:560px;opacity:.95">17 days, 16 nights. Arrive Hanoi (HAN) Friday 4 December 2026, 21:00. Depart Vientiane (VTE) Sunday 20 December 2026 on your booked Vientiane–Doha ticket. Everything below is sequenced day-by-day, with transport times, prices, visas, booking deadlines and on-the-ground detail.</p>
+  <div class="cover-meta">
+    <span class="chip">Fri 4 Dec → Sun 20 Dec 2026</span>
+    <span class="chip">6 cities · 2 countries</span>
+    <span class="chip">Route: HAN · HLG · Sapa · LPQ · VV · VTE · DOH</span>
+    <span class="chip">Peak dry season — best weather window</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#snapshot">Snapshot</a><a href="#prep">Pre-Trip Countdown</a><a href="#visas">Visas</a><a href="#overview">Overview Map</a><a href="#daily">Day-by-Day</a><a href="#transport">Transport Tables</a><a href="#stay">Where to Stay &amp; Eat</a><a href="#budget">Budget</a><a href="#practical">Practical Kit</a>
+</nav>
+
+<!-- ================= SNAPSHOT ================= -->
+<section id="snapshot">
+  <h3 class="sec"><small>01 · Trip at a glance</small>Snapshot</h3>
+  <table>
+    <tr><th style="width:17%">Date</th><th style="width:30%">Leg</th><th>Highlights</th><th style="width:18%">Sleep</th></tr>
+    <tr><td>Fri 4 Dec</td><td>Arrive Hanoi 21:00</td><td>Old Quarter arrival, late pho</td><td>Hanoi</td></tr>
+    <tr><td>Sat 5 Dec</td><td>Hanoi full day</td><td>Hoan Kiem, Temple of Literature, Ho Chi Minh complex, Train Street, water puppets, egg coffee</td><td>Hanoi</td></tr>
+    <tr><td>Sun 6 Dec</td><td>Ninh Binh day trip</td><td>Trang An sampan, Mua Cave 500 steps, Hoa Lu, Bai Dinh Pagoda</td><td>Hanoi</td></tr>
+    <tr><td>Mon 7 Dec</td><td>Ha Long Bay overnight cruise</td><td>Sung Sot Cave, Titop Island, kayaking, sunset cooking class</td><td>On board</td></tr>
+    <tr><td>Tue 8 Dec</td><td>Cruise → Hanoi → night train</td><td>Back by ~15:30; SP night train 21:45 to Lao Cai</td><td>Sleeper train</td></tr>
+    <tr><td>Wed 9 Dec</td><td>Sapa</td><td>Arrive 05:20, Cat Cat / Lao Chai–Ta Van trek, mountain views</td><td>Sapa</td></tr>
+    <tr><td>Thu 10 Dec</td><td>Sapa → Hanoi</td><td>Fansipan cable car or Ham Rong; limousine van to Hanoi</td><td>Hanoi</td></tr>
+    <tr><td>Fri 11 Dec</td><td>Fly Hanoi → Luang Prabang</td><td>VN931 13:10→14:15; Mekong dusk, Mount Phousi sunset</td><td>Luang Prabang</td></tr>
+    <tr><td>Sat 12 Dec</td><td>Luang Prabang nature</td><td>Kuang Si Falls turquoise pools + Pak Ou caves by boat</td><td>Luang Prabang</td></tr>
+    <tr><td>Sun 13 Dec</td><td>Luang Prabang culture</td><td>5:30 monk alms (Sunday = main procession), Royal Palace, morning market</td><td>Luang Prabang</td></tr>
+    <tr><td>Mon 14 Dec</td><td>Train to Vang Vieng</td><td>C95 09:48→10:42; Blue Lagoon 3, Tham Chang cave, Nam Song sunset</td><td>Vang Vieng</td></tr>
+    <tr><td>Tue 15 Dec</td><td>Vang Vieng → Vientiane</td><td>Morning tubing/kayak; D87 15:52→16:44; night market</td><td>Vientiane</td></tr>
+    <tr><td>Wed 16 Dec</td><td>Vientiane monuments</td><td>Pha That Luang, Patuxai, COPE, Kualao Lao dance dinner</td><td>Vientiane</td></tr>
+    <tr><td>Thu 17 Dec</td><td>Buddha Park &amp; Mekong</td><td>Xieng Khuan sculptures, Talat Sao, Mekong riverside sunset</td><td>Vientiane</td></tr>
+    <tr><td>Fri 18 Dec</td><td>Slow Vientiane day</td><td>Morning alms viewing, Lao massage, shopping, optional Nam Ngum</td><td>Vientiane</td></tr>
+    <tr><td>Sat 19 Dec</td><td>Last full day</td><td>That Luang revisit, coffee, packing, farewell khao soi</td><td>Vientiane</td></tr>
+    <tr><td>Sun 20 Dec</td><td>Depart Vientiane → Doha</td><td>Wattay Airport, morning at leisure per your flight time</td><td>✈ Home</td></tr>
+  </table>
+  <div class="route"><b>Golden thread:</b> Imperial Vietnam (Hanoi) → UNESCO karst (Ha Long) → cloud-forest terraces (Sapa) → royal Buddhist Laos (Luang Prabang) → karst adventure valley (Vang Vieng) → Mekong capital (Vientiane) → Doha.</div>
+</section>
+
+<!-- ================= PREP ================= -->
+<section id="prep" class="newpage">
+  <h3 class="sec"><small>02 · From today (20 Oct 2026) to departure</small>Pre-Trip Countdown — Do These Now</h3>
+  <p>Today is <b>Tuesday 20 October 2026</b>. You have <b>45 days</b>. Work down this list in order; deadlines are real (railway tickets and e-visas are the two things that actually sell out / process slowly).</p>
+  <table class="countdown">
+    <tr><th>When</th><th>Task</th><th>Detail / link</th></tr>
+    <tr><td>Today–Thu 22 Oct</td><td><b>Apply for Vietnam e-Visa</b></td><td>Official portal only: <b>evisa.gov.vn</b> · $25 single-entry / $50 multi-entry · 90-day validity · 3–5 working days (apply early; fee non-refundable). Need: passport scan + 4×6 cm white-bg photo (no glasses), entry = Noi Bai (HAN). Print 2 copies.</td></tr>
+    <tr><td>This week</td><td><b>Book Hanoi → Luang Prabang flight</b></td><td>Fri 11 Dec: <b>VN931, Vietnam Airlines, 13:10 HAN → 14:15 LPQ</b>, ~1h05, A321 (also Lao Airlines QV314 evening option 19:10→20:20). ~$130–250 one-way. Book on vietnamairlines.com or your OTA. Only ~5 nonstops/week — do not delay.</td></tr>
+    <tr><td>This week</td><td><b>Book Ha Long Bay cruise (2D1N)</b></td><td>Mon 7 Dec embark. 4-star from ~$139–190 pp all-inclusive (e.g., Cozy Bay Grand, Le Journey, Arcady) incl. Hanoi transfers, cabin, 4 meals, kayaking, Sung Sot + Titop. Book direct or via GetYourGuide/Viator with free cancellation.</td></tr>
+    <tr><td>This week</td><td><b>Book Sapa night train (Tue 8 Dec)</b></td><td>Hanoi → Lao Cai sleeper. Recommend <b>SP15 21:45→05:20</b> or SP1 21:35→05:30. 4-berth soft sleeper ≈ 450,000–630,000 VND; private tourist cabin (Chapa/Sapaly) $45–65. Book via dsvn.vn (Vietnamese, finicky cards) or easier: 12Go/Baolau/your hotel agent. <b>Dec 8 is a Tuesday — moderate demand, but book 2+ weeks ahead.</b></td></tr>
+    <tr><td>This week</td><td><b>Book hotels</b></td><td>Free-cancellation rates for: Hanoi Old Quarter ×3 nights (4,5,6 Dec), Hanoi 1 night (10 Dec), Sapa (9 Dec), Luang Prabang ×3 (11–13 Dec), Vang Vieng (14 Dec), Vientiane ×4 (15–18 Dec) + (19 Dec). See Section 07 for areas &amp; picks.</td></tr>
+    <tr><td>Early Nov</td><td><b>Book Ninh Binh day trip</b></td><td>Sun 6 Dec: Trang An + Mua Cave + Hoa Lu (~$40–55 pp incl. lunch &amp; transfers) on GetYourGuide/YourGuide, or DIY bus from Hanoi Giap Bat (~2h, ~120,000 VND).</td></tr>
+    <tr><td>Mid Nov (after ~10 Nov)</td><td><b>Apply Laos e-Visa</b></td><td>Official portal: <b>laoevisa.gov.la</b> · Tourist T-B3 · $50 + ~$1.75 card fee · 3 working days · valid for entry at <b>Luang Prabang Airport (LPQ)</b> ✓. Alternative: Visa on Arrival at LPQ, $40 exact USD cash + 1 photo + LDIF arrival form (free, online). Both give 30 days.</td></tr>
+    <tr><td>Mid Nov</td><td><b>Book Kuang Si + Pak Ou tour</b></td><td>Sat 12 Dec shared minivan day tour from LPB ~$35–50 pp, or DIY: songthaew to Kuang Si (~$6 pp return), boat to Pak Ou (~$15–25).</td></tr>
+    <tr><td>~1 Dec</td><td><b>Book Laos-China Railway tickets</b></td><td>Seats release only <b>6 days ahead at 06:30</b> Vientiane time. Book online via Baolau/12Go/YesMyTrips the moment they open: <b>Mon 14 Dec: C95 09:48 LPQ→VV 10:42</b> (~$11–15). Then on <b>1 Dec morning book Tue 15 Dec: D87 VV 15:52→VTE 16:44</b> (~$13–17). Passport name required.</td></tr>
+    <tr><td>Early Dec</td><td><b>Cash &amp; cards</b></td><td>Get clean <b>$100–200 in crisp USD notes</b> (for Laos VOA if used, exchanging, tips). ATMs plentiful in Hanoi/LPB/Vientiane. Notify your bank. Carry 2 cards on separate pockets.</td></tr>
+    <tr><td>Early Dec</td><td><b>eSIM / insurance / prints</b></td><td>Regional eSIM (Airalo/Holafly) or Viettel (Vietnam) + Unitel (Laos). Travel insurance incl. medical evacuation. Print: e-visas, flight tickets, hotel vouchers, cruise &amp; train bookings — one paper set + offline PDFs.</td></tr>
+    <tr><td>Sat 3 Dec</td><td><b>Final 24h checklist</b></td><td>Passport (6+ months validity, 2 blank pages) · power banks out of checked bag · Vietnam plug types A/B/C (220V) and Laos C/E (220V) · wear layers for the 21:00 Hanoi landing (14–18°C) · download offline Google Maps for Hanoi/Ha Long/Sapa/LPB/VV/VTE.</td></tr>
+  </table>
+  <div class="warn"><b>Critical path:</b> Vietnam e-visa (3–5 days), HAN→LPQ flight (limited nonstops), Ha Long cruise (Dec sells out), night train cabins, and the 6-day LCR railway window. Everything else is flexible.</div>
+</section>
+
+<!-- ================= VISAS ================= -->
+<section id="visas" class="newpage">
+  <h3 class="sec"><small>03 · Entry documents</small>Visas &amp; Border Formalities</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>🇻🇳 Vietnam — e-Visa</h4>
+      <ul>
+        <li>Apply: <b>evisa.gov.vn</b> (official Immigration Dept portal)</li>
+        <li>Fee: <b>$25</b> single entry · <b>$50</b> multiple entry</li>
+        <li>Validity: up to <b>90 days</b>, single or multiple entry — covers your whole stay</li>
+        <li>Processing: typically <b>3–5 working days</b> (some same-week; fee non-refundable if rejected)</li>
+        <li>Entry port: <b>Noi Bai International (HAN), Hanoi</b></li>
+        <li>Docs: passport bio scan + 4×6 cm photo (white bg, no glasses), hotel address, onward ticket</li>
+        <li>Carry: <b>2 printed colour copies</b> + digital copy</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🇱🇦 Laos — e-Visa or Visa on Arrival</h4>
+      <ul>
+        <li>Option A — e-Visa: <b>laoevisa.gov.la</b> (MOFA official) · Tourist <b>T-B3</b> · <b>$50</b> + ~$1.75 · 3 working days · <b>valid at LPQ airport ✓</b></li>
+        <li>Option B — Visa on Arrival at <b>Luang Prabang Airport</b>: <b>$40 exact cash USD</b> + 1 passport photo + filled form; 15–30 min; +$1–2 "overtime" fee possible (your flight lands 14:15 — normal hours)</li>
+        <li>Both grant <b>30 days single entry</b> — plenty for 9 nights</li>
+        <li>Before landing, fill the free <b>LDIF arrival card</b> online (QR given on aircraft/immigration desks)</li>
+        <li>Passport: 6+ months validity, 2 blank pages; carry hotel printout + your Vientiane–Doha onward ticket</li>
+        <li>Beware lookalike visa sites charging $90–130 — only the two official domains above</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ok"><b>No other visas needed:</b> your Hanoi→Luang Prabang flight is a simple international departure from HAN T2 + arrival at LPQ; the Vientiane→Doha flight departs Wattay. No Vietnam exit visa, no transit visas on any routing via BKK/CAN/SIN.</div>
+  <p class="small">Rules verified against official portals, October 2026. If your passport is not on the e-Visa eligibility list, use embassy sticker visas — allow 2 weeks. Requirements are quoted for the common case (e.g., Indian/other passports needing both visas); visa-exempt nationalities (13 listed by Vietnam, incl. Japan, Korea, UK, EU Schengen states, etc. — 45-day Vietnam stay; several ASEAN passports) should still verify on the portals.</p>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview">
+  <h3 class="sec"><small>04 · The shape of the trip</small>Route Overview</h3>
+  <p><b>Direction:</b> deep-north Vietnam first (arrival side), then a short hop into northern Laos, drifting south down the Laos–China railway spine to the capital, and out to Doha.</p>
+  <table>
+    <tr><th>Segment</th><th>Mode</th><th>Duration</th><th>Cost (pp approx)</th><th>Notes</th></tr>
+    <tr><td>HAN airport → Old Quarter</td><td>Grab / taxi</td><td>45–60 min</td><td>350,000–450,000 VND</td><td>Or bus 86, ~50,000 VND</td></tr>
+    <tr><td>Hanoi → Ninh Binh (day)</td><td>Tour minivan</td><td>2.5 h each way</td><td>incl. in tour $40–55</td><td>Trang An, Mua Cave, Hoa Lu</td></tr>
+    <tr><td>Hanoi → Ha Long cruise</td><td>Limousine + boat</td><td>3.5 h + cruise</td><td>$139–190 all-in</td><td>2D1N on board</td></tr>
+    <tr><td>Hanoi → Lao Cai (Sapa)</td><td>Night train SP15/SP1</td><td>~7.7 h</td><td>$18–65</td><td>21:45→05:20; +1 h road to Sapa</td></tr>
+    <tr><td>Sapa → Hanoi</td><td>Limousine van</td><td>5–5.5 h</td><td>$15–25</td><td>Or SP8 day train 12:05→19:30</td></tr>
+    <tr><td>Hanoi → Luang Prabang</td><td>VN931 flight</td><td>1 h 05</td><td>$130–250</td><td>13:10→14:15, Fri 11 Dec</td></tr>
+    <tr><td>Luang Prabang → Vang Vieng</td><td>LCR train C95</td><td>54 min</td><td>from $11</td><td>09:48→10:42, Mon 14 Dec</td></tr>
+    <tr><td>Vang Vieng → Vientiane</td><td>LCR train D87</td><td>52 min</td><td>from $13</td><td>15:52→16:44, Tue 15 Dec</td></tr>
+    <tr><td>Vientiane → Doha</td><td>Your booked ticket</td><td>~7 h direct or 10–14 h via BKK/HAN</td><td>booked</td><td>Wattay (VTE) → Hamad (DOH)</td></tr>
+  </table>
+  <div class="route"><b>Altitude &amp; climate arc:</b> Hanoi 15 m (14–22°C, dry winter) → Ha Long sea level (misty karsts) → Sapa 1,600 m (8–16°C, cold dawn, possible fog/hoar frost) → LPB 305 m → Vang Vieng 580 m → Vientiane 170 m (dry season 18–31°C, warm afternoons, cool river evenings).</div>
+</section>
+
+<!-- ================= DAILY ================= -->
+<section id="daily" class="newpage">
+  <h3 class="sec"><small>05 · The full day-by-day</small>Itinerary, 4–20 December 2026</h3>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 0 · Fri 20 Oct → Fri 3 Dec — Countdown (see Section 02)</span><span class="pl">Home base: Doha</span></div>
+    <div class="day-b">
+      <p>Today kicks off the booking sprint: Vietnam e-visa, HAN→LPQ flight, Ha Long cruise, Sapa night train, hotels — then Laos e-visa mid-November and the railway tickets in early December. By 3 Dec every voucher should be printed and your USD cash sorted.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 1 · Fri 4 Dec — Arrive Hanoi, 21:00</span><span class="pl">Sleep: Old Quarter</span></div>
+    <div class="day-b">
+      <div class="slot"><b>21:00</b><span>Land at <b>Noi Bai International (HAN)</b>. Immigration: passport + printed e-visa (30–45 min at this hour), baggage, SIM/eSIM already active.</span></div>
+      <div class="slot"><b>21:50</b><span><b>Transfer to Old Quarter:</b> Grab app (cheapest, ~400,000 VND) or official airport taxi queue (~450,000 VND). 45–60 min night drive through Hanoi's ring roads. Pre-book a hotel pickup (~$18–25) if you prefer zero hassle after the long-haul.</span></div>
+      <div class="slot"><b>23:00</b><span>Check in (pre-arranged late check-in; most Old Quarter hotels hold your room all night). Drop bags, change out of travel clothes.</span></div>
+      <div class="slot"><b>23:15</b><span><b>Late dinner</b> — you land hungry. Walk to <b>Phở Gia Truyền</b> (49 Bát Đàn) if still serving, or any 24h phở stall around Tô Tịch / Hàng Bài: steaming bowl of phở bò (beef phở) or bún chả if open. Alternatively hotel-area banh mi + iced coffee.</span></div>
+      <div class="tip">Hanoi in December is 14–22°C at night — bring a light jacket out of your daypack, not from the suitcase.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 2 · Sat 5 Dec — Hanoi Grand Tour</span><span class="pl">Sleep: Hanoi · Meals: street food</span></div>
+    <div class="day-b">
+      <div class="slot"><b>07:00</b><span><b>Breakfast:</b> <b>bánh cuốn</b> (steamed rice rolls) at 14 Hàng Gà, or bún riêu crab noodle soup. Coffee: <b>egg coffee (cà phê trứng)</b> at Café Giảng (39 Nguyễn Hữu Huân) — the original.</span></div>
+      <div class="slot"><b>08:30</b><span><b>Hoàn Kiếm Lake &amp; Ngọc Sơn Temple</b> — cross the red Huc Bridge to the island temple; 30 min. Walk the lake's northern edge via Hàng Đào.</span></div>
+      <div class="slot"><b>09:30</b><span><b>Temple of Literature (Văn Miếu)</b> — Vietnam's first university, 1070 AD; serene courtyards. ~30 min by foot/cyclo, 30,000 VND entry. (Closed Mon &amp; Fri mornings for ceremonies sometimes — today is Saturday ✓.)</span></div>
+      <div class="slot"><b>11:00</b><span><b>Ho Chi Minh Complex</b> — Mausoleum (closed Mon &amp; Fri; Sat ok — queue by 10:45, no photos inside, shorts forbidden), One-Pillar Pagoda, Presidential Palace grounds, Ho Chi Minh Museum. Free entry, passport required. Dress shoulders/knees covered.</span></div>
+      <div class="slot"><b>13:00</b><span><b>Lunch:</b> <b>bún chả</b> (grill-your-own pork patties + noodles) at Bún Chả Hương Liên (24 Lê Văn Hưu — the Obama-bun cha place) or chả cá fish hotpot on Chả Cá street.</span></div>
+      <div class="slot"><b>14:30</b><span><b>Old Quarter lanes walk</b> — 36 streets each named after a trade (Hàng Bạc silver, Hàng Gai silk). <b>St. Joseph's Cathedral</b>, <b>Đồng Xuân market</b>, water-puppet craft shops.</span></div>
+      <div class="slot"><b>16:00</b><span><b>Hanoi Train Street</b> — the famous narrow alley on Nguyễn Công Trứ / Phung Hung where the train passes between houses. Go late afternoon for the 15:15/17:00-ish passes; buy a café seat (coffee ~40,000 VND) and stand clear when the horn sounds. (Access rules change — if barriers block the classic spot, the Phung Hung mural street cafés still have views.)</span></div>
+      <div class="slot"><b>18:00</b><span><b>Water puppet show</b> — Thăng Long Water Puppet Theatre, 57B Đinh Tiên Hoàng, tickets ~100,000 VND, shows hourly 18:00–21:00. 50 min of lacquered ducks, dragons and folk music on the pond stage.</span></div>
+      <div class="slot"><b>19:30</b><span><b>Dinner crawl</b>: <b>bánh xèo</b> sizzling crepes (172 Đội Cấn), <b>phở gà</b> at Phở Thìn 13 Lò Đúc, then bia hơi (draft beer) at Bia Hoi Junction (Tạ Hiện) — the world's cheapest fresh beer, ~10,000 VND a glass.</span></div>
+      <div class="tip"><b>Budget the day:</b> entries ~150,000 VND + food ~250,000 VND + cyclo/Grab ~100,000 VND ≈ $20 pp.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 3 · Sun 6 Dec — Ninh Binh Day Trip ("Ha Long Bay on land")</span><span class="pl">Sleep: Hanoi · Booked tour</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:00</b><span>Pick-up from Old Quarter hotel by minivan (~2.5 h drive, 100 km south; comfort stop en route).</span></div>
+      <div class="slot"><b>10:30</b><span><b>Tràng An</b> — sampan rowed by locals through karst caves and flooded valleys (2 h loop, three grottoes, ~200,000 VND entry incl. boat). The Dec light on the lime cliffs is superb. Sit left for cave entries.</span></div>
+      <div class="slot"><b>12:30</b><span><b>Lunch</b> — included in most tours: goat meat (dê), crispy rice, local greens at a Tam Coc / Ninh Binh village restaurant.</span></div>
+      <div class="slot"><b>13:30</b><span><b>Mua Cave (Hang Múa)</b> — 500 stone steps to the ridge viewpoint over Tam Coc's rice paddies and river: the iconic photo of the trip. Water + shoes with grip.</span></div>
+      <div class="slot"><b>15:00</b><span><b>Hoa Lu ancient capital</b> — 10th-century temples of kings Đinh &amp; Lê, set against cliffs. Short walk, 30 min.</span></div>
+      <div class="slot"><b>16:00</b><span>Optional <b>Bai Dinh Pagoda</b> — Vietnam's largest Buddhist complex (electric car ride across the hillside).</span></div>
+      <div class="slot"><b>18:30</b><span>Back in Hanoi. <b>Dinner:</b> chả cá or a bowl of bún bò Nam Bộ near your hotel. Early night — cruise pickup is early.</span></div>
+      <div class="tip">DIY version: bus from Giáp Nhập station to Ninh Bình (~2 h, 120,000 VND), then hire a motorbike driver locally for the loop (~300,000–500,000 VND/day). Tour is easier and only marginally pricier.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 4 · Mon 7 Dec — Ha Long Bay Overnight Cruise</span><span class="pl">Sleep: On board</span></div>
+    <div class="day-b">
+      <div class="slot"><b>07:30</b><span>Hotel pick-up (Old Quarter meeting points 07:15–08:00) — limousine/minivan ~3.5 h via the new expressway to Tuan Chau Marina.</span></div>
+      <div class="slot"><b>11:30</b><span>Arrive marina, check-in lounge, then tender to your junk. Welcome drink, cabin assignment (book a <b>sea-view balcony cabin</b> if budget allows).</span></div>
+      <div class="slot"><b>12:30</b><span><b>Lunch onboard</b> as the boat cruises among 1,600+ limestone islands. Watch for Dog Stone Islet, Fighting Cock Islet.</span></div>
+      <div class="slot"><b>14:30</b><span><b>Sung Sot (Surprise) Cave</b> — the bay's largest grotto; cathedral chambers of stalactites (climb ~100 steps). Then <b>Titop Island</b>: swim off the tiny beach or climb 420 steps to the 360° panorama viewpoint.</span></div>
+      <div class="slot"><b>17:00</b><span><b>Sunset party + Vietnamese cooking class</b> on the sundeck — learn fresh spring rolls as the sun drops behind karsts. Happy hour buy-2-get-1.</span></div>
+      <div class="slot"><b>19:00</b><span><b>Dinner onboard</b> (seafood set menu), then squid fishing from the stern, stargazing, or bar. Anchored overnight in a quiet lagoon.</span></div>
+      <div class="warn">December Ha Long is often <b>softly misty</b> — atmospheric, not a cancellation. Operators sail unless official storms; kayak/ swimming runs if seas are calm.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 5 · Tue 8 Dec — Cruise Finale → Night Train to Sapa</span><span class="pl">Sleep: Sleeper train SP15/SP1</span></div>
+    <div class="day-b">
+      <div class="slot"><b>06:00</b><span>Tai chi on the sundeck; coffee as the mist lifts off the bay.</span></div>
+      <div class="slot"><b>07:00</b><span>Breakfast, then <b>Luon Cave</b> by kayak or bamboo boat through a hidden lagoon (monkeys on the walls). Some itineraries place Sung Sot/Titop on day 2 — either way you cover all three icons.</span></div>
+      <div class="slot"><b>10:30</b><span>Brunch while cruising back to Tuan Chau; disembark ~11:30.</span></div>
+      <div class="slot"><b>12:00</b><span>Limousine back to Hanoi — arrive <b>~15:30</b>. Collect the pre-booked night-train tickets from your hotel/agent (or e-ticket + passport).</span></div>
+      <div class="slot"><b>16:00</b><span>Shower/refresh at hotel (use day-use room or late checkout booked for this date), last Hanoi stroll, pack daypack for Sapa. <b>Leave the big suitcase locked at the hotel</b> (most allow storage to 10 Dec).</span></div>
+      <div class="slot"><b>19:45</b><span>Dinner near station: phở or cơm (rice set). Taxi to <b>Hanoi Railway Station</b> (Ga Hà Nội, 120 Lê Duẩn).</span></div>
+      <div class="slot"><b>21:45</b><span>Board <b>SP15</b> (or SP1 21:35 — whichever you booked). 4-berth soft-sleeper cabin, AC, bedding provided. Lights out early: 4-berth lower bunk is easiest with luggage. ~7 h 40 min.</span></div>
+      <div class="tip">Private tourist wagons (Chapa Express, Sapaly) attach to SP trains — wood-panelled cabins, bottled water, better linen: worth the $20 upgrade for a night you actually need to sleep on.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 6 · Wed 9 Dec — Sapa: Terraces &amp; Hill Tribes</span><span class="pl">Sleep: Sapa town</span></div>
+    <div class="day-b">
+      <div class="slot"><b>05:20</b><span>Arrive <b>Lao Cai station</b>. Pre-booked shuttle/minivan up the 38 km mountain road to Sapa town (50–60 min, ~60,000–150,000 VND shared, or taxi 300,000 VND). Dawn over the Hoàng Liên Sơn foothills if skies clear.</span></div>
+      <div class="slot"><b>06:30</b><span>Early check-in or luggage room at hotel; hot shower + breakfast at the hotel (eggs, baguette — French colonial legacy — and strong local coffee).</span></div>
+      <div class="slot"><b>08:30</b><span>Start the classic valley trek with a local H'mong or Red Dao guide (~$25–40 for a private/guide-day, or free-ish if you simply walk): <b>Cat Cat village</b> (waterfall, traditional houses, 30 min downhill) — or the richer full-day <b>Lao Chải → Tả Van</b> walk along terrace ridgelines down to the Muong Hoa valley (~4–5 h, easy-moderate, rice terraces at their post-harvest golden stubble in December).</span></div>
+      <div class="slot"><b>12:30</b><span><b>Lunch in Tả Van village</b> — bamboo-sticky rice, stream fish, thang co if you're adventurous (included on guided treks).</span></div>
+      <div class="slot"><b>15:00</b><span>Continue/return to Sapa town by jeep. Browse <b>Sapa stone church</b> and the weekend-adjacent market streets; try thắng cố or a warm hotpot for dinner.</span></div>
+      <div class="slot"><b>19:00</b><span>Early night — Sapa evenings in December drop to 5–10°C. Heated blanket + a rhum (corn whisky) nightcap.</span></div>
+      <div class="warn"><b>Cold alert:</b> Sapa Dec dawns can hit 4–8°C with fog or even frost on Fansipan. Layers, beanie, light gloves, proper shoes. Porters/guides can arrange rain ponchos cheaply.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 7 · Thu 10 Dec — Sapa Heights → Hanoi</span><span class="pl">Sleep: Hanoi</span></div>
+    <div class="day-b">
+      <div class="slot"><b>07:00</b><span>Choose your morning: <b>Fansipan cable car</b> to the 3,143 m "Roof of Indochina" summit (cable ~700,000 VND; go early for clear views above the cloud) — or the lighter <b>Ham Rong flower garden</b> walk right above town with valley panoramas.</span></div>
+      <div class="slot"><b>11:00</b><span>Check out. Board the <b>limousine van</b> Sapa → Hanoi (Sapa Express / Green Bus / Good Morning Sapa — reclining 9-seat vans, ~$18–25, hotel pick-up, 5–5.5 h, rest stop). Alternative: day train SP8 12:05 Lao Cai → 19:30 Hanoi if you prefer rails.</span></div>
+      <div class="slot"><b>16:30</b><span>Arrive Hanoi (hotel pick-up point). Reunite with the stored suitcase, laundry done, repack for Laos (lighter — LPB/VV/VTE are warm).</span></div>
+      <div class="slot"><b>18:00</b><span><b>Farewell-Vietnam evening:</b> sunset drink at a rooftop bar (Hanoi Social Club / The Summit), then <b>bún bò Huế</b> or a final bún chả + banh mi corner feast. Pack carry-on for tomorrow's flight: documents, meds, swimwear (Kuang Si!), powerbank.</span></div>
+      <div class="tip">Hotels will often keep your big bag free if you rebook the 10th night with them — ask at check-in on the 4th.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 8 · Fri 11 Dec — Fly to Luang Prabang, Sunset on the Mekong</span><span class="pl">Sleep: Luang Prabang</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:00</b><span>Slow morning; breakfast; <b>Grab to Noi Bai T2</b> (45 min — leave 3 h before departure for the international hop).</span></div>
+      <div class="slot"><b>13:10</b><span><b>VN931 Vietnam Airlines → Luang Prabang</b> (1 h 05, A321; Lao Airlines QV314 19:10 is the backup). Departure from Hanoi T2.</span></div>
+      <div class="slot"><b>14:15</b><span>Land <b>LPQ airport</b>. Visa lane: e-Visa letter or VOA desk ($40 cash) — 15–30 min at this quiet airport, then luggage + customs.</span></div>
+      <div class="slot"><b>15:15</b><span>Transfer to hotel (4 km to the peninsula; tuk-tuk/taxi ~50,000–80,000 LAK or pre-booked). Check in to your guesthouse on the Mekong/Khan side.</span></div>
+      <div class="slot"><b>16:00</b><span><b>Old town orientation walk</b>: Waten Street shophouses, <b>Wat Visoun</b> (Watermelon stupa), French colonial lanes. Snack: Lao coffee (pounded with a mortar — "coffee Lao") at a riverfront café.</span></div>
+      <div class="slot"><b>17:15</b><span><b>Mount Phousi (Phou Si)</b> — 328 steps for the classic sunset over the Mekong and Nam Khan confluence, golden light on Luang Prabang's rooftops and distant Mekong bends. (Entry 20,000 LAK; go up Phousi, down the other side to the night market.)</span></div>
+      <div class="slot"><b>18:30</b><span><b>Night market on Sisavangvong Road</b> — H'mong textiles, mulberry paper, riverweed crackers (kaipen). <b>Dinner:</b> barbecue street stalls — grilled fish in banana leaf, laap, sticky rice (khao niao) eaten with fingers.</span></div>
+      <div class="ok">You are now in Laos: kip (LAK) is the currency, ~21,000 = $1. ATMs on the main strip; USD cash widely accepted at better rates at banks/exchange shops.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 9 · Sat 12 Dec — Kuang Si Falls &amp; Pak Ou Caves</span><span class="pl">Sleep: Luang Prabang · Full-day tour ~$35–50</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:00</b><span>Minivan pick-up. First stop: <b>Kuang Si Falls</b> (29 km, 45 min) — tiered turquoise pools spilling 60 m through jungle. Swim in the lower pools (bring swimsuit), climb to the top viewpoint, and visit the <b>Free the Bears rescue centre</b> at the entrance (included).</span></div>
+      <div class="slot"><b>11:30</b><span>En route back: stop at a <b>Khamu/Lao village</b> and a rice-wine/whisky (lao-lao) tasting stall.</span></div>
+      <div class="slot"><b>13:00</b><span><b>Lunch</b> in town (often included), then board a <b>slow boat up the Mekong</b> (~2 h upstream past sandbanks and fishing rafts).</span></div>
+      <div class="slot"><b>15:30</b><span><b>Pak Ou Caves</b> — the river-cliff grottoes filled with thousands of small Buddha images left by pilgrims for centuries; two caves (lower: full of statues, upper: stalactites + a river view).</span></div>
+      <div class="slot"><b>17:30</b><span>Return boat + van to LPB. <b>Dinner:</b> <b>buffet-Lao-style khantoke</b> or orlam stew at a local kitchen on the Khan; or French-Lao bistro (Luang Prabang has superb French bakeries — croissants for tomorrow's alms-adjacent breakfast).</span></div>
+      <div class="tip">Kuang Si is a national park — no swimwear above the 3rd pool; pay the small photo/camera fee if asked (10,000 LAK). Waters are genuinely cold in Dec; a quick dip is bracing, not long.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 10 · Sun 13 Dec — Sacred Luang Prabang (Alms Day Sunday)</span><span class="pl">Sleep: Luang Prabang</span></div>
+    <div class="day-b">
+      <div class="slot"><b>05:15</b><span><b>Baci / quiet start</b> — walk to <b>Sakkaline Road</b> in silence by 05:30 for <b>binthabat (tak bat)</b>: the river of saffron-robed monks streaming past to collect sticky rice. Sunday is the main, longest procession. Buy a basket of rice (10,000–20,000 LAK) from a vendor; kneel, offer a small handful, don't touch the monks (women never touch). Watch only — no flash, no blocking.</span></div>
+      <div class="slot"><b>06:30</b><span>Breakfast; back to hotel for proper sleep or keep going.</span></div>
+      <div class="slot"><b>08:30</b><span><b>Royal Palace Museum (Haw Kham)</b> — throne hall, the 16th-century Phra Bang Buddha image the city is named for, murals of Lao history. (Opens 08:00; dress respectfully.)</span></div>
+      <div class="slot"><b>10:00</b><span><b>Wat Xieng Thong</b> — the masterpiece temple of Laos: sweeping tiered roofs, gold-tree mosaic on the rear wall, the funeral carriage tower. The single must-see monument of the city.</span></div>
+      <div class="slot"><b>11:00</b><span><b>Traditional Arts &amp; Ethnology Centre</b> (excellent small museum of hill-tribe textiles) or the <b>Buffalo Dairy</b> café for ethical elephant-free coffee &amp; ice cream.</span></div>
+      <div class="slot"><b>12:30</b><span><b>Lunch:</b> <b>lao-lao sausage</b>, laap, som tam (green papaya salad) at a riverside kitchen.</span></div>
+      <div class="slot"><b>14:00</b><span><b>Weaving &amp; craft lanes:</b> visit a H'mong weaving cooperative on the Khan (watch natural indigo &amp; lotus-silk techniques), or take a short <b>cooking class</b> (market visit + 3 dishes, ~$30–45, ~3 h).</span></div>
+      <div class="slot"><b>17:30</b><span><b>Mekong sunset drink</b> at a river-bar, then <b>Bangkok-style street dinner</b>: grilled meats, khao piak sen (Lao chicken noodle soup). Early night — train tomorrow.</span></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 11 · Mon 14 Dec — Laos–China Railway to Vang Vieng</span><span class="pl">Sleep: Vang Vieng</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:00</b><span>Check out, tuk-tuk to <b>Luang Prabang Railway Station</b> (13 km, ~25 min, 40,000–60,000 LAK — station is well outside town, not walkable). Luggage through security; be seated <b>30–60 min early</b>.</span></div>
+      <div class="slot"><b>09:48</b><span><b>Train C95 → Vang Vieng</b> (Lane Xang EMU, 2nd class ~$11–15). 54 minutes of pure karst theatre — viaducts, tunnels, rice valleys; sit on the <b>right (mountain) side</b> heading south.</span></div>
+      <div class="slot"><b>10:42</b><span>Arrive <b>Vang Vieng station</b> (7 km from town). Songthaew/taxi to guesthouse (~20,000–30,000 LAK). Check in; leave bags.</span></div>
+      <div class="slot"><b>12:00</b><span><b>Lunch:</b> riverside restaurant on the Nam Song — pizza/smoothies (the backpacker classics) or Lao set. Rent a bicycle (~30,000 LAK/day) for the afternoon.</span></div>
+      <div class="slot"><b>13:30</b><span><b>Blue Lagoon 3</b> (10 km west) — the prettiest of the three lagoons: milky-turquoise water in a jungle bowl, rope swings, a short walk to <b>Tham Jung cave</b> (climb for a sky-hole view). Entry ~10,000 LAK.</span></div>
+      <div class="slot"><b>16:30</b><span>Return; climb <b>Tham Chang cave</b> near town for the balcony view over the valley, or just drift on a bamboo tube in the river shallows.</span></div>
+      <div class="slot"><b>17:45</b><span><b>Sunset on the Nam Song</b> — the limestone wall behind town goes amber. Beer Lao on a deck chair.</span></div>
+      <div class="slot"><b>19:00</b><span><b>Dinner:</b> Vang Vieng main strip — try <b>buffalo tartare</b> (the local specialty) or happy-shake-free proper Lao food at a garden restaurant. Early night; tomorrow is a travel day but a short one.</span></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 12 · Tue 15 Dec — Vang Vieng Morning → Train to Vientiane</span><span class="pl">Sleep: Vientiane</span></div>
+    <div class="day-b">
+      <div class="slot"><b>07:30</b><span><b>Morning on the river:</b> choose one — <b>tubing the Nam Song</b> (float past caves and rope swings, ~2 h, ~55,000 LAK incl. tube), <b>kayaking</b> through the rapids section, or a <b>bike ride to the rice paddies</b> north of town with karst backdrop photos.</span></div>
+      <div class="slot"><b>11:00</b><span>Shower, check out, lunch near the strip. <b>Book the songthaew to Vang Vieng station</b> for ~14:45 (7 km).</span></div>
+      <div class="slot"><b>15:52</b><span><b>Train D87 → Vientiane</b> (international CR200J Fuxing set, 2nd class ~$13). 52 minutes, then the Mekong plain opens up.</span></div>
+      <div class="slot"><b>16:44</b><span>Arrive <b>Vientiane (Khamsavath) station</b>. Tuk-tuk/taxi to hotel in the riverfront/old-town area (~20–30 min, 60,000–100,000 LAK). Check in.</span></div>
+      <div class="slot"><b>18:00</b><span><b>Mekong riverside promenade</b> — the whole city walks here at dusk: street-food stalls, fruit shakes, the sun dropping toward Thailand across the river.</span></div>
+      <div class="slot"><b>18:45</b><span><b>Night market</b> opposite the river (handicrafts, textiles) → <b>dinner:</b> <b>khao soi luang prabang</b> (minced-pork noodle soup — different from the Thai version), grilled chicken, sticky rice. Beer Lao dark at a riverside bar.</span></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 13 · Wed 16 Dec — Vientiane Monument Circuit</span><span class="pl">Sleep: Vientiane</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:00</b><span>Breakfast at hotel / <b>jeow bong</b> (buffalo-rind dip) with sticky rice at a local shop.</span></div>
+      <div class="slot"><b>08:45</b><span><b>Pha That Luang</b> — Laos' holiest monument, a gold-plated stupa over a 16th-century relic; go early for empty courtyards and best light. Free / 30,000 LAK for the museum. Dress covered.</span></div>
+      <div class="slot"><b>10:15</b><span><b>Hai An / That Luang surroundings:</b> walk to <b>Patuxai Victory Monument</b> (Laos' Arc de Triomphe — climb the interior stair for the city panorama, 5,000 LAK) through its weirdly wonderful mythological concrete reliefs.</span></div>
+      <div class="slot"><b>11:30</b><span><b>COPE Visitor Centre</b> — the essential, sobering museum on UXO (unexploded ordnance) in Laos, with a reconstructed bomb-shelter home and prosthetics workshop. ~$2, 1.5 h. Tuk-tuk ~15 min from centre.</span></div>
+      <div class="slot"><b>13:30</b><span><b>Lunch:</b> Lao-Italian or the excellent street food near <b>Talat Sao (Morning Market)</b>; browse the market's textile floors upstairs.</span></div>
+      <div class="slot"><b>15:00</b><span><b>Wat Si Saket</b> (thousands of tiny Buddholes in cloister niches) and <b>Wat Ho Phra Keo</b> (former royal temple, now a museum of sculpture).</span></div>
+      <div class="slot"><b>18:00</b><span><b>Cultural dinner:</b> <b>Kualao Restaurant</b> (Samsenthai) — Lao set banquet with traditional dance show from ~19:00 (reserve ahead, ~$15–25 pp). Or French-Lao fine dining on the river.</span></div>
+      <div class="tip">Vientiane is compact — the monument circuit is 3–4 km total. Tuk-tuks quote 30,000–50,000 LAK per hop; agree the fare before hopping in. Grab coverage is thin; use hotel-arranged rides.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 14 · Thu 17 Dec — Buddha Park &amp; Mekong Slow Life</span><span class="pl">Sleep: Vientiane</span></div>
+    <div class="day-b">
+      <div class="slot"><b>08:30</b><span><b>Buddha Park (Xieng Khuan)</b> — 25 km east on the Mekong bank: a surreal 1958 sculpture field of 200+ Buddhist and Hindu figures — a giant reclining Buddha, a demonic "Hell Gate" pumpkin tower you climb through scenes of heaven and hell. Tuk-tuk round trip ~250,000–350,000 LAK (share with other guests), or local bus 44 from the Northern Bus Terminal, 5,000 LAK. Entry 15,000 LAK. ~2 h there.</span></div>
+      <div class="slot"><b>11:30</b><span>On the way back, stop at <b>Nam Ngum Dam</b> viewpoint area, or simply return to town.</span></div>
+      <div class="slot"><b>13:00</b><span><b>Lunch + Talat Sao deep-dive</b> — the real market: coffee sacks, hill-tribe silver, silk sinh skirts, and the best Lao coffee beans (~50,000 LAK/250 g) to take home.</span></div>
+      <div class="slot"><b>15:00</b><span><b>Lao massage</b> (oil or dry, 1 h ≈ 80,000–120,000 LAK) — the traditional style is firmer and more stretching than Thai; excellent after 14 days of walking.</span></div>
+      <div class="slot"><b>17:00</b><span><b>Sunset boat on the Mekong</b> — short sampan cruise from the Chao Anouvong park jetty (~$8–12, 45 min) watching the Thai bank light up. Alternative: climb <b>Phu Chai or the park hill</b>… better: rooftop bar at your hotel with a Beer Lao.</span></div>
+      <div class="slot"><b>19:00</b><span><b>Dinner:</b> <b>orm-lam</b> (smoky Lao lamb-rib stew) at a riverside restaurant, then a last wander of the promenade. Video-call home — the next two days are soft.</span></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 15 · Fri 18 Dec — Slow Day: Rituals, Shopping, Reserve Time</span><span class="pl">Sleep: Vientiane</span></div>
+    <div class="day-b">
+      <div class="slot"><b>06:30</b><span>Optional: <b>observe (not join) morning alms</b> on the quiet lanes behind Wat Si Saket — smaller and more intimate than Luang Prabang's. Then coffee at <b>Joma / Bean Café</b> (Vientiane's best café culture).</span></div>
+      <div class="slot"><b>09:30</b><span><b>Reserve slot A:</b> Full-day <b>Nam Ngum Dam &amp; island lunch</b> trip (dam, reservoir boat, grilled fish lunch, ~$30–40 by charter/shared van) — OR — <b>Reserve slot B:</b> slow local day: <b>That Dam (Black Stupa)</b>, French colonial Indochina-style villas on Rue Setthathirath, <b>Axe Music/ bookshops</b>, stationery and silk hunting.</span></div>
+      <div class="slot"><b>13:00</b><span>Lunch. Try <b>ping kai</b> (Lao grilled chicken) with jaew dipping sauces at a courtyard restaurant.</span></div>
+      <div class="slot"><b>15:00</b><span><b>Souvenir run:</b> Lao coffee + whiskey-lao + sinh textiles + mulberry paper cards from Talat Sao or the Hmong market stalls on the riverfront. Ship nothing heavy — carry-on it home.</span></div>
+      <div class="slot"><b>17:30</b><span><b>Final Mekong sunset sit</b> — the ritual of the trip: shake, sticky rice, watching the boats. Then pack properly for the flight (see Section 09 checklist).</span></div>
+      <div class="tip">Keep ~$50–80 in USD cash and enough kip for the airport taxi tomorrow; exchange leftover VND at banks (airport rates are poor).</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 16 · Sat 19 Dec — Last Full Day in Laos</span><span class="pl">Sleep: Vientiane</span></div>
+    <div class="day-b">
+      <div class="slot"><b>09:00</b><span><b>Luang Prabang-style indulgence, Vientiane edition:</b> revisit your favourite café; or the <b>Lao Textile Museum</b> (hand-loomed silks, ~100,000 LAK); or a final 90-min massage.</span></div>
+      <div class="slot"><b>11:00</b><span><b>Pha That Luang revisited at golden hour of day</b> — or the quiet alternative <b>Simuong temple</b> and the stupa's side lanes. Photos without crowds.</span></div>
+      <div class="slot"><b>12:30</b><span><b>Farewell lunch:</b> sit-down Lao tasting menu — laap, tam mak hoong, orlam, khao niao, and a Lao coffee flan. Toast the trip.</span></div>
+      <div class="slot"><b>14:30</b><span><b>Packing &amp; admin:</b> final bag weigh-in, hand-wash pickup, e-ticket &amp; passport photocopies, download offline maps for Doha arrival, message airline for meal/s seats if needed.</span></div>
+      <div class="slot"><b>16:00</b><span><b>Chao Anouvong Park stroll</b> — riverfront gardens with views to Thailand; the fountain show at dusk if scheduled.</span></div>
+      <div class="slot"><b>18:30</b><span><b>Easy dinner</b> near hotel: fried river fish, som tam, and an early night — especially if your Doha flight is morning; if it's evening, enjoy a longer final night.</span></div>
+      <div class="ok"><b>Hotel tip:</b> ask for late check-out (14:00) or day-use room for tomorrow; most Vientiane hotels are generous about storing luggage all day free.</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-h"><span class="dt">Day 17 · Sun 20 Dec — Vientiane → Doha</span><span class="pl">✈ On your booked ticket</span></div>
+    <div class="day-b">
+      <div class="slot"><b>Morning</b><span>Per your ticket's departure time. Typical patterns on this route (verify against your booking): via Bangkok on Lao Airlines + Qatar Airways (e.g., QV445 18:10 → QR833 → DOH ~23:55 same day, ~10 h total), via Hanoi on QV311 + QR977, or a Qatar Airways service. <b>If late-evening departure:</b> keep the day: morning coffee, park, massage, lunch. <b>If afternoon departure:</b> leave the hotel by T−3 h.</span></div>
+      <div class="slot"><b>T−3 h</b><span><b>Transfer to Wattay International (VTE)</b> — 3 km from the centre, taxi 80,000–120,000 LAK (~$5–8), 15–25 min. Check in: passport, Laos exit stamp, boarding pass. Security is quick at this small airport.</span></div>
+      <div class="slot"><b>In flight</b><span>~7 h 20 direct to Doha, or 10–14 h with one stop. Qatar Airways legs include meals; kip can't be spent airside — finish the cash or keep it for next time (Laos re-entry easy).</span></div>
+      <div class="slot"><b>Arrival DOH</b><span>Hamad International: immigration + baggage, then home. Trip complete: <b>17 days, 2 countries, 6 bases, 4 UNESCO/World-Heritage-grade sites (Ha Long Bay, Luang Prabang town, Pha That Luang, Hanoi's old quarter spirit).</b></span></div>
+      <div class="tip">Keep your Vietnam e-visa and Lao entry stamp pages photographed — useful for future visa applications and expense claims.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRANSPORT ================= -->
+<section id="transport" class="newpage">
+  <h3 class="sec"><small>06 · Timetables &amp; tickets</small>Transport Reference Tables</h3>
+
+  <h4 style="color:var(--teal);margin:6px 0 8px">✈ Key flights</h4>
+  <table>
+    <tr><th>Flight</th><th>Route</th><th>Departs</th><th>Arrives</th><th>Days</th><th>Notes</th></tr>
+    <tr><td>VN931 (Vietnam Airlines)</td><td>HAN → LPQ</td><td>13:10</td><td>14:15</td><td>Mon, Wed, Thu, Fri, Sat</td><td><b>Your Fri 11 Dec leg</b> · A321 · ~1h05</td></tr>
+    <tr><td>QV314 (Lao Airlines)</td><td>HAN → LPQ</td><td>19:10</td><td>20:20</td><td>Daily (typically)</td><td>Evening backup option</td></tr>
+    <tr><td>Vietnam/Lao Airlines</td><td>LPQ → HAN</td><td>—</td><td>—</td><td>daily-ish</td><td>Only needed if plans change</td></tr>
+    <tr><td>QV445 + QR833</td><td>VTE → BKK → DOH</td><td>18:10</td><td>23:55</td><td>select days</td><td>Classic Qatar connect, arrives same day</td></tr>
+    <tr><td>QV311 + QR977</td><td>VTE → HAN → DOH</td><td>14:40</td><td>23:10</td><td>select days</td><td>1-stop via Hanoi</td></tr>
+    <tr><td>QR (direct, where operated)</td><td>VTE → DOH</td><td>varies</td><td>~7 h later</td><td>select days</td><td>Check your ticket for QR97x series</td></tr>
+  </table>
+  <p class="small">Vientiane–Doha fares from ~$630 return-equivalent; your ticket is already issued. Flight times shown are representative 2026 schedules — always trust your booking confirmation over any timetable.</p>
+
+  <h4 style="color:var(--teal);margin:18px 0 8px">🚂 Hanoi ↔ Lao Cai (Sapa) — night trains, Tue 8 Dec / return</h4>
+  <table>
+    <tr><th>Train</th><th>Hanoi → Lao Cai</th><th>Lao Cai → Hanoi</th><th>4-berth soft sleeper</th><th>Private cabin (Chapa/Sapaly)</th></tr>
+    <tr><td>SP15 / SP1</td><td>21:45 / 21:35 → 05:20 / 05:30</td><td>—</td><td>~450,000–630,000 VND</td><td>$45–65</td></tr>
+    <tr><td>SP3</td><td>22:00 → 05:50</td><td>—</td><td>~510,000–650,000 VND</td><td>$45–65</td></tr>
+    <tr><td>SP7</td><td>22:40 → 06:27</td><td>—</td><td>~490,000–620,000 VND</td><td>—</td></tr>
+    <tr><td>SP8 (day)</td><td>—</td><td>12:05 → 19:30</td><td>~250,000–315,000 VND</td><td>—</td></tr>
+    <tr><td>SP2 / SP4</td><td>—</td><td>20:55 / 21:50 → 04:45 / 05:40</td><td>~400,000+ VND</td><td>option</td></tr>
+  </table>
+  <p class="small">Lao Cai → Sapa town: 35–38 km, 45–60 min. Shared shuttle 60,000–80,000 VND (wait outside arrivals), taxi 200,000–300,000 VND, pre-booked van $8–12. Book at <b>dsvn.vn</b>, 12Go, Baolau or via hotel — passport required at boarding.</p>
+
+  <h4 style="color:var(--teal);margin:18px 0 8px">🚅 Laos–China Railway — Luang Prabang ↔ Vang Vieng ↔ Vientiane (2026)</h4>
+  <table>
+    <tr><th>Train</th><th>LPQ → VV</th><th>VV → VTE</th><th>Duration</th><th>Fare (2nd class, from)</th><th>Use on this trip</th></tr>
+    <tr><td>C95</td><td>09:48 → 10:42</td><td>10:46 → 11:47</td><td>~54 min</td><td>$11–15</td><td><b>Mon 14 Dec: LPQ → VV</b></td></tr>
+    <tr><td>C91</td><td>12:28 → 13:34</td><td>13:38 → 14:31</td><td>~1 h 06</td><td>$11–17</td><td>Afternoon alternative</td></tr>
+    <tr><td>D87</td><td>14:58 → 15:49</td><td>15:52 → 16:44</td><td>~51–52 min</td><td>$13–17</td><td><b>Tue 15 Dec: VV → VTE</b></td></tr>
+    <tr><td>K11 (slow)</td><td>16:31 → 18:00</td><td>18:06 → 19:25</td><td>~1 h 20</td><td>$9–23 hard seat</td><td>Budget fallback</td></tr>
+    <tr><td>D83</td><td>18:11 → 19:02</td><td>19:06 → 19:59</td><td>~51–53 min</td><td>$13–17</td><td>Evening fallback</td></tr>
+    <tr><td>C85</td><td>18:35 → 19:31</td><td>19:35 → 20:28</td><td>~53–56 min</td><td>$11–15</td><td>Evening fallback</td></tr>
+  </table>
+  <div class="warn"><b>LCR rules that trip people up:</b> tickets open <b>only 6 days ahead, 06:30 Vientiane time</b>, sold via LCR app (needs a Lao phone number — so use <b>Baolau / 12Go / YesMyTrips</b> agents or station counters in central LPB &amp; Vientiane Center). Name must match passport exactly. Arrive <b>60–90 min early</b>: station security + passport check before boarding. Trains do not wait.</div>
+
+  <h4 style="color:var(--teal);margin:18px 0 8px">🚕 Local transfers — quick fares</h4>
+  <table>
+    <tr><th>Transfer</th><th>Mode</th><th>Fare</th><th>Time</th></tr>
+    <tr><td>Noi Bai → Hanoi Old Quarter</td><td>Grab/taxi · bus 86</td><td>350–450k VND · ~50k VND</td><td>45–60 min</td></tr>
+    <tr><td>Hanoi station ↔ hotel</td><td>Grab</td><td>50–100k VND</td><td>10–20 min</td></tr>
+    <tr><td>Lao Cai → Sapa</td><td>shuttle / taxi</td><td>60–80k · 200–300k VND</td><td>45–60 min</td></tr>
+    <tr><td>LPQ airport → old town</td><td>tuk-tuk</td><td>50–80k LAK</td><td>15–20 min</td></tr>
+    <tr><td>LPB town → railway station</td><td>tuk-tuk</td><td>40–60k LAK</td><td>25–30 min (13 km!)</td></tr>
+    <tr><td>VV station ↔ town</td><td>songthaew</td><td>20–30k LAK</td><td>15–20 min</td></tr>
+    <tr><td>Vientiane station → riverfront</td><td>tuk-tuk</td><td>60–100k LAK</td><td>20–30 min</td></tr>
+    <tr><td>Vientiane → Wattay airport</td><td>taxi</td><td>80–120k LAK</td><td>15–25 min</td></tr>
+  </table>
+</section>
+
+<!-- ================= STAY & EAT ================= -->
+<section id="stay" class="newpage">
+  <h3 class="sec"><small>07 · Beds &amp; bowls</small>Where to Stay &amp; What to Eat</h3>
+
+  <h4 style="color:var(--teal)">🏨 Accommodation strategy (book free-cancellation now)</h4>
+  <table>
+    <tr><th>Base</th><th>Nights</th><th>Stay in</th><th>Example picks (any booking site)</th><th>Budget / mid / treat</th></tr>
+    <tr><td>Hanoi</td><td>4, 5, 6 + 10 Dec</td><td>Old Quarter (Hoàn Kiếm) — walk-to-everything</td><td>Budget: Nexy Hostel, Memory Hostel · Mid: La Siesta Premium, Silk Path Grand · Treat: Sofitel Legend Metropole</td><td>$15 / $45 / $180+</td></tr>
+    <tr><td>Sapa</td><td>9 Dec</td><td>Sapa town centre (near stone church)</td><td>Cat Cat View, Pao's Sapa Leisure, Hotel de la Coupole–MGallery</td><td>$20 / $70 / $180</td></tr>
+    <tr><td>Luang Prabang</td><td>11, 12, 13 Dec</td><td>Old peninsula, Khan river side (walk to night market &amp; Phousi)</td><td>My Dream, Mano · Dalat Luxury, Saffron · Burasari Heritage, Avani+ (pool!)</td><td>$25 / $80 / $200</td></tr>
+    <tr><td>Vang Vieng</td><td>14 Dec</td><td>Nam Song riverside strip</td><td>Nana Backpackers (party) vs. Vang Vieng Rock View / Inthira (chill)</td><td>$12 / $45 / $120</td></tr>
+    <tr><td>Vientiane</td><td>15, 16, 17, 18 (+19)</td><td>Riverfront / Chao Anouvong / Setthathirath Rd</td><td>Family, City Inn · Ansara, Lao Orchid · Mercure, Settha Palace (heritage)</td><td>$25 / $70 / $150</td></tr>
+  </table>
+  <p class="small">Everywhere: book <b>free-cancellation</b> now, re-confirm best rates in November. Hotels hold luggage free on travel days — standard practice.</p>
+
+  <h4 style="color:var(--teal);margin-top:16px">🍜 Eat-this list</h4>
+  <div class="grid2">
+    <div class="card">
+      <h4>Vietnam — must-haves</h4>
+      <ul>
+        <li><b>Phở bò</b> — Gia Truyền (49 Bát Đàn), Hanoi</li>
+        <li><b>Bún chả</b> — Hương Liên (24 Lê Văn Hưu)</li>
+        <li><b>Cà phê trứng</b> — Café Giảng (39 Nguyễn Hữu Huân)</li>
+        <li><b>Bánh cuốn</b> — 14 Hàng Gà</li>
+        <li><b>Bún bò Huế</b> — anywhere, spicy beef noodle</li>
+        <li><b>Bia hơi</b> — Tạ Hiện junction, 10k VND</li>
+        <li>Sapa: <b>thắng cố</b>, corn wine; Ninh Bình: <b>dê</b> (goat)</li>
+        <li>Ha Long: fresh seafood on board</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Laos — must-haves</h4>
+      <ul>
+        <li><b>Khao niao</b> — sticky rice, the Lao staple, eat with fingers</li>
+        <li><b>Laap</b> — the national minced-meat "salad"</li>
+        <li><b>Orm lam</b> — smoky lamb-rib stew (Vientiane)</li>
+        <li><b>Khao soi Lao</b> — minced pork noodle soup (not Thai)</li>
+        <li><b>Tam mak hoong</b> — spicy green papaya salad</li>
+        <li><b>Kaipen</b> — fried riverweed with sesame (LPB snack)</li>
+        <li><b>Coffee Lao</b> + Lao whisky (lao-lao), Beer Lao everywhere</li>
+        <li>LPB: French bakeries — croissants by the Mekong</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUDGET ================= -->
+<section id="budget">
+  <h3 class="sec"><small>08 · Money</small>Indicative Budget (per person, mid-range)</h3>
+  <table>
+    <tr><th>Category</th><th>Low</th><th>Mid</th><th>Comfort</th><th>Notes</th></tr>
+    <tr><td>Visas (VN + LA)</td><td>$65</td><td>$90</td><td>$90</td><td>VN e-visa $25–50; LA e-visa $52 or VOA $40</td></tr>
+    <tr><td>Internal flights (HAN→LPQ)</td><td>$130</td><td>$180</td><td>$280</td><td>Only one internal flight on this itinerary</td></tr>
+    <tr><td>Halong cruise 2D1N</td><td>$130</td><td>$160</td><td>$280</td><td>All-inclusive incl. transfers &amp; meals</td></tr>
+    <tr><td>Night train HAN↔Lao Cai</td><td>$40</td><td>$55</td><td>$110</td><td>Return 4-berth or private cabin</td></tr>
+    <tr><td>Laos trains (LPQ-VV-VTE)</td><td>$22</td><td>$30</td><td>$50</td><td>2nd → 1st class</td></tr>
+    <tr><td>Hotels (16 nights, shared twin)</td><td>$350</td><td>$700</td><td>$1,400</td><td>Per-person share of mid rooms</td></tr>
+    <tr><td>Food &amp; drink (17 days)</td><td>$170</td><td>$280</td><td>$450</td><td>$10 / $16 / $26 per day</td></tr>
+    <tr><td>Tours &amp; entries</td><td>$120</td><td>$180</td><td>$280</td><td>Ninh Binh, Kuang Si+Pak Ou, Buddha Park, COPE, Phousi, cables, massages</td></tr>
+    <tr><td>Local transfers &amp; tuk-tuks</td><td>$60</td><td>$100</td><td>$160</td><td></td></tr>
+    <tr><td>eSIMs + insurance</td><td>$30</td><td>$60</td><td>$120</td><td>Insurance highly recommended</td></tr>
+    <tr><td><b>TOTAL (excl. Doha flights)</b></td><td><b>~$1,120</b></td><td><b>~$1,835</b></td><td><b>~$3,220</b></td><td>International air already booked</td></tr>
+  </table>
+  <p><b>Currency cheat-sheet:</b> 1 USD ≈ 25,500 VND · ≈ 21,000 LAK (Oct 2026 ballpark — check day-of). ATMs: BIDV/VTB/Vietcombank (VN), BCEL/ST Bank (LA); typical withdrawal fee $1–3 + your bank's. Cards work in hotels/upmarket restaurants; <b>street food, markets, tuk-tuks and trains = cash</b>. Carry small VND/LAK notes; USD crisp and unmarked for Laos.</p>
+</section>
+
+<!-- ================= PRACTICAL ================= -->
+<section id="practical" class="newpage">
+  <h3 class="sec"><small>09 · Field manual</small>Practical Kit</h3>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>🎒 Packing for this exact trip</h4>
+      <ul>
+        <li>Layer system for Hanoi/Sapa: base layers + mid fleece + windproof shell; beanie + gloves for Sapa dawn (4–8°C)</li>
+        <li>Light long-sleeves + trousers for temple visits (That Luang, mausoleum, Wat Xieng Thong)</li>
+        <li>Swimwear (Kuang Si, Titop, Vang Vieng lagoons) + quick-dry towel</li>
+        <li>Broken-in trekking shoes/sneakers + flip-flops for guesthouses</li>
+        <li>Power bank, universal adapter (VN types A/B/C; LA type C/E; both 220V)</li>
+        <li>Reusable water bottle (refill at hotels — plastic is a real problem in Laos)</li>
+        <li>Sun cream, insect repellent, basic meds (Imodium, rehydration salts, band-aids)</li>
+        <li>Passport photos ×4 (VOA backup), photocopies of passport + visas</li>
+        <li>Packable daypack for Sapa trek &amp; day tours</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📱 Connectivity &amp; apps</h4>
+      <ul>
+        <li><b>eSIM:</b> Airalo/Holafly regional Asia plan, or Viettel tourist SIM at HAN (~$10, best Sapa/Halong coverage) + Unitel at LPQ (~$5)</li>
+        <li><b>Grab</b> — taxis &amp; food in Vietnam; limited/no coverage in Laos (use hotel-arranged tuk-tuks)</li>
+        <li><b>Offline:</b> Google Maps downloads for each city; Google Translate Lao + Vietnamese packs</li>
+        <li><b>Booking:</b> Booking/Agoda (hotels), 12Go/Baolau (trains, buses), GetYourGuide (tours), Klook (Vietnam attractions)</li>
+        <li>Messenger/WhatsApp — default for tour operators in both countries</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🩺 Health &amp; safety</h4>
+      <ul>
+        <li>Travel insurance with medical evacuation — carry the policy number paper + app</li>
+        <li>Tap water: not for drinking; bottled/filtered is cheap everywhere (refill where possible)</li>
+        <li>Street-food rule: eat where queues of locals are; hot &amp; freshly cooked = fine</li>
+        <li>Sapa trek poles help on the Mua Cave steps and terrace paths</li>
+        <li>Ha Long: use provided life jackets on kayaks/tenders; seas are calm in Dec</li>
+        <li>December fog on Sapa/Ha Long roads — book transfers with established operators</li>
+        <li>Check your routine vaccines are current (Hep A, typhoid recommended by most advisories)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>☎ Numbers &amp; etiquette</h4>
+      <ul>
+        <li>Emergency VN: police <b>113</b> · fire <b>114</b> · ambulance <b>115</b></li>
+        <li>Emergency LA: police <b>191</b> · ambulance <b>195</b> · fire <b>190</b></li>
+        <li>Tourist police Hanoi: 024 3939 1457 · Vietnam e-visa help on evisa.gov.vn</li>
+        <li><b>Temple etiquette:</b> remove shoes, cover shoulders/knees, never point feet at Buddha, ask before photographing people</li>
+        <li><b>Alms in Luang Prabang:</b> observe silently; don't stand over the monks, no flash, no touch (men only offer)</li>
+        <li>Bargain markets gently with a smile; round up fares kindly — small money matters more to them than you</li>
+        <li>Photography of military/police/border = never</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4 style="color:var(--teal);margin:18px 0 8px">🧳 Final-24-hours checklist (Sat 3 Dec / travel days)</h4>
+  <table>
+    <tr><th>✔</th><th>Item</th><th>Detail</th></tr>
+    <tr><td>☐</td><td>Documents wallet</td><td>Passport · VN e-visa print ×2 · LA e-visa or $40 cash + photo · all tickets/vouchers paper + offline PDF</td></tr>
+    <tr><td>☐</td><td>Cash split</td><td>USD $100–200 crisp · VND ~2,000,000 · kip exchanged on arrival · cards in two separate bags</td></tr>
+    <tr><td>☐</td><td>Electronics</td><td>Phone + charger + power bank (hand luggage) + adapter + headphones</td></tr>
+    <tr><td>☐</td><td>Weather kit</td><td>Jacket for Hanoi landing · swimsuit for Kuang Si · sunhat for Vang Vieng</td></tr>
+    <tr><td>☐</td><td>Home logistics</td><td>Notify bank · airport parking/ride booked · house/pet cover · Doha arrival pickup</td></tr>
+  </table>
+
+  <div class="ok" style="margin-top:20px"><b>That's the whole dossier.</b> Follow the countdown in Section 02, keep the day pages on your phone (and paper), and the trip runs itself: Vietnam's grand circuit, Laos' royal calm, and a straight shot home from the Mekong to Doha. Safe travels — 4 December is 45 days away.</div>
+</section>
+
+<div class="footer">
+  Vietnam &amp; Laos Dossier · 4–20 December 2026 · compiled 20 October 2026 · Schedules &amp; prices checked against operator sites October 2026 — reconfirm all tickets 24 h before travel.<br>
+  To save as PDF: open this page in a browser → Print → Destination “Save as PDF” → A4 → enable Background graphics.
+</div>
+
+</div>
+<button class="print" onclick="window.print()">🖨 Save as PDF</button>
+</body>
+</html>
